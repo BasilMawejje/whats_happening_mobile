@@ -11,6 +11,7 @@ class NewsList extends React.Component {
     return (
       <View style={styles.list}>
         <FlatList
+          keyExtractor={item => item.url}
           data={this.props.news}
           renderItem={({ item }) => (
             <NewsItem newSingle={item} />
